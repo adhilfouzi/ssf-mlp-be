@@ -13,8 +13,8 @@ const addNews = async (req, res) => {
     
     const newNews = new News({
       image: req.file.path,
-      heading: req.body.heading,
-      news: req.body.news,
+      heading: req.body.header,
+      news: req.body.content,
     });
 
     const savedNews = await newNews.save();
@@ -22,7 +22,7 @@ const addNews = async (req, res) => {
     if (savedNews) {
       res
         .status(201)
-        .json({ message: "News added successfully", data: savedNews });
+        .json({ message: "News added successfully", message:true });
     } else {
       res.status(400).json({ message: "Failed to add news" });
     }
