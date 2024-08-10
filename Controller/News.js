@@ -9,6 +9,8 @@ require("dotenv").config();
 
 const addNews = async (req, res) => {
   try {
+   
+    
     const newNews = new News({
       image: req.file.path,
       heading: req.body.heading,
