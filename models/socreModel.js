@@ -9,6 +9,7 @@ const ScoreSchema = new mongoose.Schema({
     Kolathur: { type: Number, required: true, default: 0 },
     ManjeriEast: { type: Number, required: true, default: 0 },
     ManjeriWest: { type: Number, required: true, default: 0 },
+    Edavannappara: { type: Number, required: true, default: 0 },
     Perinthalmanna: { type: Number, required: true, default: 0 },
     Malappuram: { type: Number, required: true, default: 0 },
     Wandoor: { type: Number, required: true, default: 0 }

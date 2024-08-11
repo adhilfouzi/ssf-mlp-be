@@ -29,8 +29,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// app.use(cors({
+//   origin: 'https://www.ssfmalappurameast.org',
+// }));
 app.use(cors({
-  origin: 'https://www.ssfmalappurameast.org',
+  origin: 'http://localhost:5173',
 }));
 app.get("/", dataController.getData);
 app.post("/imageUpload", multer.productImagesUpload, dataController.addImage);
